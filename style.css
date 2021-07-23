@@ -1,0 +1,98 @@
+:root {
+    --color-primary: #0046FF;
+    --color-secondary: #0F1121;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a, a:link, a:visited {
+    text-decoration: none;
+    color: #fff;
+}
+
+body {
+    background: var(--color-secondary);
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 6rem 8rem;
+}
+
+.menuContainer-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuContainer-items li:not(:last-child) {
+    margin-right: 5rem;
+}
+
+.hoverBtn {
+    position: relative;
+}
+
+.dropdown-content {
+    width: 163px;
+    height: 193px;
+
+    background: var(--color-primary);
+    border-radius: 11px;
+    padding: 1rem 2rem;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+    position: absolute;
+
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+
+    transition: all 0.5s ease;
+}
+.dropdown-content li {
+    margin-right: 0 !important
+}
+
+ul li:hover > ul {
+  visibility: visible;
+  opacity: 1;
+  display: flex;
+}
+
+/* .menuContainer-items .hoverBtn:hover .dropdown-content {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+} */
+
+.btn {
+    background: none;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.signUp-btn {
+    background: var(--color-primary);
+    border-radius: 11px;
+    padding: 18px 25px;
+    margin-left: 1rem;
+}
