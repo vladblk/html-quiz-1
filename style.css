@@ -21,6 +21,13 @@ a, a:link, a:visited {
 body {
     background: var(--color-secondary);
     color: #fff;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+#logo {
+    font-size: 32px;
+    font-weight: 700;
 }
 
 nav {
@@ -41,7 +48,7 @@ nav {
     margin-right: 5rem;
 }
 
-.hoverBtn {
+.hoverLink {
     position: relative;
 }
 
@@ -59,12 +66,13 @@ nav {
     flex-direction: column;
 
     position: absolute;
+    left: -38px;
+    top: 20px;
 
     visibility: hidden;
     opacity: 0;
-    display: none;
 
-    transition: all 0.5s ease;
+    transition: all 0.2s ease-in-out;
 }
 .dropdown-content li {
     margin-right: 0 !important
@@ -73,14 +81,7 @@ nav {
 ul li:hover > ul {
   visibility: visible;
   opacity: 1;
-  display: flex;
 }
-
-/* .menuContainer-items .hoverBtn:hover .dropdown-content {
-    visibility: visible;
-    opacity: 1;
-    display: block;
-} */
 
 .btn {
     background: none;
@@ -88,6 +89,7 @@ ul li:hover > ul {
     color: inherit;
     font-family: inherit;
     cursor: pointer;
+    font-weight: 700;
 }
 
 .signUp-btn {
@@ -95,4 +97,47 @@ ul li:hover > ul {
     border-radius: 11px;
     padding: 18px 25px;
     margin-left: 1rem;
+
+    transform: translateY(0);
+    transition: all .2s ease-in-out;
+}
+.signUp-btn:hover {
+    transform: translateY(-2px);
+}
+
+.arrow {
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-left: 10px;
+    margin-bottom: 2px;
+}
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+@media screen and (max-width: 1000px) {
+    .menuContainer-items {
+        display: none;
+    }
+
+    nav {
+        margin: 2rem 3rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #logo {
+        font-size: 26px;
+    }
+    
+    .logIn-btn {
+        display: none;
+    }
+
+    nav {
+        margin: 1rem 2rem;
+    }
 }
